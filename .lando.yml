@@ -1,0 +1,11 @@
+name: PROJECT-KIRBY
+recipe: lamp
+config:
+  webroot: web
+  php: '8.1'
+  composer_version: 2-latest
+services:
+  appserver:
+    type: php
+    build:
+      - composer create-project getkirby/starterkit web
